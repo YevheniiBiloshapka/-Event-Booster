@@ -1,0 +1,33 @@
+<div class="container backdrop js-reject-backdrop visually-hidden">
+    <div class="wrapper">
+        <div class="wrapper__modal">
+        <button class="wrapper__button"></button>
+        <div class="wrapper__image">
+            <picture>
+                <source
+                media="(min-width: 1280px)"
+                srcset="./images/rejectionModal/radio-large.png"
+                type="image/png"
+                />
+                <source
+                media="(min-width: 768px)"
+                srcset="./images/rejectionModal/radio-medium.png"
+                type="image/png"
+              />
+              <source
+                media="(min-width: 320px)"
+                srcset="./images/rejectionModal/radio-small.png"
+                type="image/png"
+              />
+              <img src="./images/rejectionModal/radio-small.png"
+              alt="logo"
+              loading="lazy" />
+            </picture>
+        </div>
+        <div class="wrapper__for-text">
+            <p class="wrapper__text"><span class="wrapper__text--upper">Sorry!</span> <br> There are no matches were found for your query.
+              <br> <p class="wrapper__text wrapper__text--below"> Please, change your search criteria and try again.</p></p>
+        </div>
+        </div>
+    </div>
+</div>

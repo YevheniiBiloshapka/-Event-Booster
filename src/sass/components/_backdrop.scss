@@ -1,0 +1,29 @@
+.backdrop {
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+  background: rgba(32, 13, 29, 0.6);
+  backdrop-filter: blur(1.5px);
+  transition: opacity var(--animation);
+
+  &.visually-hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.backdrop.visually-hidden .modal {
+  transform: scale(0.2);
+  opacity: 0;
+}
+.no-scroll {
+  overflow: hidden;
+}

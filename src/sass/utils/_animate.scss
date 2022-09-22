@@ -1,0 +1,9 @@
+.eventcards__item.js-anim {
+  transition: all 0.3s ease 0.5s;
+  opacity: 0;
+  transform: scale(0.5);
+}
+.eventcards__item._active {
+  opacity: 1;
+  transform: scale(1);
+}

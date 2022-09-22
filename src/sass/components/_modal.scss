@@ -1,0 +1,285 @@
+.modal {
+  position: relative;
+
+  margin: auto;
+  width: 280px;
+  padding: 80px 20px 100px;
+  border-radius: 150px 0px;
+
+  background: var(--modal-bg-color);
+
+  transform: scale(1);
+  opacity: 1;
+  transition: transform var(--animation), opacity var(--animation);
+
+  @include mq(tablet) {
+    border-radius: 300px 0px;
+    padding: 32px 50px 40px 87px;
+    width: 704px;
+  }
+
+  @include mq(desktop) {
+    padding: 54px 74px 40px;
+    width: 1035px;
+  }
+}
+
+.close-button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 25px;
+  top: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--modal-bg-color);
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: -4;
+    left: 10px;
+    content: '';
+    height: 22px;
+    width: 3px;
+    background-color: var(--btn-bg-color);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: var(--accent-color);
+  }
+
+  @include mq(tablet) {
+    width: 25px;
+    height: 25px;
+    right: 32px;
+    top: 32px;
+
+    &::before,
+    &::after {
+      height: 32px;
+    }
+  }
+}
+
+.modal__small-pic {
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 102px;
+  height: 102px;
+  margin-bottom: 20px;
+
+  @include mq(tablet) {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 40px;
+  }
+  @include mq(desktop) {
+    width: 132px;
+    height: 132px;
+    margin-bottom: 40px;
+  }
+}
+
+.modal__big-pic {
+  @include mq(tablet) {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    //object-position: 50% 50%;
+  }
+  @include mq(desktop) {
+  }
+}
+
+.modal__list {
+  margin-bottom: 24px;
+  @include mq(tablet) {
+    display: flex;
+    column-gap: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+.modal__card-poster {
+  display: none;
+  flex-shrink: 0;
+
+  @include mq(tablet) {
+    display: block;
+    width: 249px;
+  }
+  @include mq(desktop) {
+    width: 427px;
+    height: 664px;
+  }
+}
+
+.modal__list-info {
+  @include mq(mobile) {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  @include mq(tablet) {
+    text-align: start;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.modal__list-info:last-child {
+  margin-bottom: 0px;
+}
+
+.modal__item-title {
+  margin-bottom: 5px;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+
+  @include mq(desktop) {
+    margin-bottom: 7px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
+}
+
+.modal__item-text {
+  color: var(--modal-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  @include mq(desktop) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+
+.modal__icon-code {
+  display: inline-block;
+  height: 16px;
+  margin-right: 4px;
+
+  @include mq(desktop) {
+    height: 17px;
+    margin-right: 6px;
+  }
+}
+
+.modal__icon-location {
+  display: inline-block;
+  height: 12px;
+
+  @include mq(tablet) {
+    height: 15px;
+  }
+}
+
+.modal__list-btn {
+  padding: 10px 19px;
+  margin: 16px auto;
+  width: 145px;
+  min-height: 40px;
+
+  display: block;
+
+  border: none;
+  color: var(--main-text-color);
+  background-color: var(--btn-bg-color);
+
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  @include mq(tablet) {
+    margin: 16px auto 16px 0;
+  }
+
+  @include mq(desktop) {
+    margin: 20px auto 32px 0;
+  }
+
+  transform: scale(1);
+
+  transition: transform var(--animation);
+
+  &:focus,
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.modal__price-item:last-child .modal__list-btn {
+  margin-bottom: 0;
+}
+
+.moreinfo-link {
+  padding: 10px 7px;
+  margin: 0 auto;
+  width: 230px;
+  height: 40px;
+
+  display: block;
+
+  outline: 1px solid;
+  color: var(--btn-bg-color);
+  background-color: var(--modal-bg-color);
+
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  @include mq(tablet) {
+    width: 255px;
+    padding: 10px 15px;
+  }
+
+  transform: scale(1);
+
+  transition: transform var(--animation);
+
+  &:focus,
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.modal__map-point .modal__item-text {
+  transform: scale(1);
+
+  transition: transform var(--animation);
+
+  &:focus,
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.disabled-link {
+  pointer-events: none;
+  opacity: 0.5;
+}

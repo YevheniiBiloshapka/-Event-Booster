@@ -1,0 +1,40 @@
+.pagination {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.pagination__list {
+  display: inline-flex;
+  gap: 5px;
+}
+
+.pagination__btn {
+  padding: 5px 0px;
+  width: 30px;
+  border: none;
+  border-radius: 10px 0px;
+
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  transition: transform var(--animation);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    color: var(--accent-color);
+  }
+}
+
+.js-current-btn .pagination__btn {
+  box-shadow: 0 0 10px 3px var(--accent-color);
+  color: var(--accent-color);
+}
+
+.rest {
+  color: var(--main-text-color);
+  align-self: flex-end;
+  letter-spacing: 0.3em;
+}

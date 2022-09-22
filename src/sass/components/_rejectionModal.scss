@@ -1,0 +1,125 @@
+.wrapper__modal {
+    margin: 0 auto;
+    width: 685px;
+    height: 520px;
+    background-color: var(--modal-bg-color);
+    position: relative;
+    border-radius: 90px 0px;
+
+    @include mq(tablet-only) {
+        width: 562px;
+        height: 370px;
+    }
+
+    @include mq(mobile-only) {
+        width: 280px;
+        height: 215px;
+    }
+}
+
+.wrapper__image {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+
+    margin-top: 45px;
+
+    @include mq(mobile-only) {
+        margin-top: 25px;
+    }
+}
+
+.wrapper__for-text {
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    transform:translateX(50%);
+
+    width: 600px;
+
+    @include mq(tablet-only) {
+       width: 350px;
+       top: 45%;
+    }
+ 
+    @include mq(mobile-only) {
+        width: 200px;
+        top: 40%;
+     }
+}
+
+.wrapper__text {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+
+    color: #4F4F4F;
+
+    @include mq(tablet-only) {
+        font-size: 24px;
+    }
+
+    @include mq(mobile-only) {
+        font-size: 14px;
+    }
+
+    &--upper {
+        text-transform: uppercase;
+        color: #DA100B;
+    }
+
+    &--below {
+        margin-top: 25px;
+    }
+}
+
+.wrapper__button {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    background-color: var(--modal-bg-color);
+
+    border: none;
+    cursor: pointer;
+
+    width: 18px;
+    height: 18px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: -4;
+        left: 10px;
+        content: '';
+        height: 22px;
+        width: 3px;
+        background-color: var(--btn-bg-color);
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        background-color: var(--accent-color);
+    }
+
+    @include mq(tablet) {
+        width: 25px;
+        height: 25px;
+        right: 32px;
+        top: 32px;
+
+        &::before,
+        &::after {
+            height: 32px;
+        }
+    }
+}
+
+

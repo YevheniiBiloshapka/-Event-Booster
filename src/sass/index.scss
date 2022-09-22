@@ -1,0 +1,20 @@
+@import './utils/normalize-min';
+@import './utils/vars';
+@import './utils/mixin';
+@import './utils/visually_hidden';
+@import './utils/animate';
+
+@import './base/reset';
+@import './base/common';
+
+@import './components/backdrop';
+@import './components/modal';
+@import './components/team-modal';
+@import './components/pagination';
+@import './components/preloader';
+@import './components/rejectionModal';
+
+@import './layout/header';
+@import './layout/search';
+@import './layout/cardList';
+@import './layout/footer';
